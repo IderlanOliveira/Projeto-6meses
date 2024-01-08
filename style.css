@@ -5,8 +5,8 @@ body, html{
 
 
 button{
-    color: rgb(251, 251, 251);
-    background-color: black
+    color: rgb(255, 255, 255);
+    background-color: rgb(173, 167, 167)
 }
 
 .label{

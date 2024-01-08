@@ -1,19 +1,21 @@
-const express = require("express");
+const express = require('express');
+const basicAuth = require('express-basic-auth');
+
 const app = express();
 const port = 3000;
 
-const basicAuth = require("express-basic-auth");
+const users = {
+    'seuUsuario': 'suaSenha',
+};
+
 app.use(basicAuth({
-    users: {"Betania":"Beta123"},
-    users: {"Iderlan": "TI"},
+    users: users,
     challenge: true,
-    unauthorizedResponse: "Acesso negado, procure o TI"
+    unauthorizedResponse: 'Acesso não autorizado!',
 }));
 
-app.get("/", (req, res) => {
-    res.send("Bem-vindo à rota protegida!");
-});
+app.use(express.static('public'));
 
-app.lintens(port, () => {
-    console.log("Servidor rodando em http://localhost:${port}");
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
