@@ -6,27 +6,35 @@
     <title>Lista de Itens</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    
-    <div id="Titulo 1">
-        <center><h1>Sistema do Almoxarifado</h1></center>
-    </div>
-
 </head>
 <body>
-    
-    <center>
-    <p>Digite seu usuário: </p>
-    <input type="name" id="usuario"><br>
-    <p>Digite sua senha: </p>
-    <input type="password" id="senha"><br><br>
-    
-    
-    <a href="pagina2.html">
-    <input type="button" id="enter" value="ENTER">
-    </a>
-    </center>
 
+    <div id="Titulo1" style="text-align: center;">
+        <h1>Sistema do Almoxarifado</h1>
+    </div>
 
+    <div style="text-align: center;">
+        <p>Digite seu usuário:</p>
+        <input type="text" id="usuario"><br>
+        <p>Digite sua senha:</p>
+        <input type="password" id="senha"><br><br>
+        
+        <button id="enter" onclick="autenticar()">ENTER</button>
+    </div>
+
+    <script>
+        function autenticar() {
+            var usuario = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+
+            // Substitua 'seuUsuario' e 'suaSenha' pelos valores reais
+            if (usuario === 'iderlan.oliveira' && senha === '23030270ji') {
+                window.location.href = 'pagina2.html';
+            } else {
+                alert('Credenciais inválidas. Tente novamente.');
+            }
+        }
+    </script>
 
 </body>
 </html>
