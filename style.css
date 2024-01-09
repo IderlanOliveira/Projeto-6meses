@@ -6,7 +6,9 @@ body, html{
 
 button{
     color: rgb(255, 255, 255);
-    background-color: rgb(173, 167, 167)
+    background-color: rgb(173, 167, 167);
+    height: 10%;
+    
 }
 
 .label{
@@ -23,3 +25,16 @@ p{
     color: #000000;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
