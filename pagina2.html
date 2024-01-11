@@ -5,36 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPA - Dr. Délio Almeida</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https.js"></script>
+    <script src="script2.js"></script>
+
 
 </head>
 <body>
-    <div style="text-align: center;" id="Titulo 1">
+    <div style="text-align: center;" id="Titulo1">
     <h1>SISTEMA DE ALMOXARIFADO</h1>
     </div>
 
-
-    <div style="text-align: center;">
-        
-        <label for="author">Nome: </label><br><input type="text" name="nome" id="setor" />
-        <br>
-        <label >Setor: </label><br><input type="text" name="author" id="setor"/>
-        <br>
-        <label>Item de retirada: </label><br><input type="name" name="Item de retirada" id="item de retirada"/>
-        <br>
-        <label>Quantidade: </label><br><input type="number" name="quantidade" id="quantidade"/>
-        <br><br>
-        
-        <input type="button" id="btnSubmit" value="RETIRAR">
-       
-        
-    </div>
+    <form id="formTabela" style="text-align: center;">
+        <label for="itemInput">Novo Item:</label>
+        <input type="text" id="itemInput" required>
+        <button type="button" onclick="adicionarItem()">Adicionar</button>
+    </form>
+    
+    <!-- Tabela -->
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Itens:</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaBody">
+            <!-- Linhas da tabela serão adicionadas dinamicamente aqui -->
+        </tbody>
+    </table>
 
 </body>
 
+
 <footer>
+    <div style="text-align: end;">
+        <a href="pagina3.html">
+            <button type="button" style="height: auto; width: auto;" > Pagina de retirada</button>
+        </a>
+    </div>
 
-
+    <div style="text-align: center;">
+    <p>&copy; 2024 UPA - Délio Almeida</p>
+    </div>
 </footer>
+
 </html>
