@@ -9,7 +9,7 @@ app.get("/Tabela", function(req, res){
     res.sendFile(__dirname + "/html/pagina2.html")
 });
 
-app.get("/Solicitação", function(req, res){
+app.get("/Solicitacao", function(req, res){
     res.sendFile(__dirname + "/html/pagina3.html")
 });
 
