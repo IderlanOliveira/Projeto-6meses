@@ -1,26 +1,35 @@
-const express = require('express');
-const basicAuth = require('express-basic-auth');
-
+const express = require("express");
 const app = express();
-const port = 3000;
 
-const users = {
-    'seuUsuario': 'suaSenha',
-};
-
-app.use(basicAuth({
-    users: users,
-    challenge: true,
-    unauthorizedResponse: 'Acesso não autorizado!',
-}));
-
-app.use(express.static('public'));
-
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/html/pagina1.html")
 });
 
+app.get("/Tabela", function(req, res){
+    res.sendFile(__dirname + "/html/pagina2.html")
+});
 
-const itens = textbox("Digite os itens aqui")
+app.get("/Solicitação", function(req, res){
+    res.sendFile(__dirname + "/html/pagina3.html")
+});
 
-document.write("Esta é a lista de Itens disponiveis" + name)
+app.get("/Itens", function(req, res){
+    res.sendFile(__dirname + "/html/pagina4.html")
+});
+
+// app.get("/blog", function(req, res){
+//     res.sendFile(__dirname + "/html/pagina3.html")
+// });
+
+
+
+
+
+
+
+
+app.listen(9191, function(){
+    console.log("Servidor Rodando na url http://localhost:9191");
+
+});
+//localhost9091
